@@ -1,0 +1,80 @@
+.location_section {
+  min-height: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 1.7rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 1.7rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .location_container {
+    display: grid;
+    grid-template-columns: repeat(4, 9.6rem);
+    grid-auto-rows: auto;
+    justify-items: center;
+    gap: 1.4rem;
+    margin-bottom: 1.5rem;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 1rem;
+    // justify-content: center;
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    .location_card {
+      transition: all 0.7s ease-in;
+      &:hover {
+        img {
+          transform: scale(1);
+        }
+      }
+      height: 5.5rem;
+      width: 10rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2rem;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+      }
+
+      figcaption {
+        position: absolute;
+        bottom: 0.5rem;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  .location_container > * {
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

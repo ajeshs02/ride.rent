@@ -1,0 +1,29 @@
+.popular_section {
+  min-height: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 1.7rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 1.7rem;
+    font-weight: bold;
+  }
+
+  .popular_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    justify-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

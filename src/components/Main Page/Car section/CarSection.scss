@@ -1,0 +1,29 @@
+.car-section {
+  min-height: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+
+  h1 {
+    text-align: center;
+    color: rgb(73, 73, 73);
+  }
+
+  .sub-card-container {
+    max-width: 93%;
+    padding-top: 0.6rem;
+    padding: 0.6rem 0.2rem;
+    border-radius: 0.6rem;
+    background-color: #f0f0f0;
+
+    .slider-container {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}

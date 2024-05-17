@@ -1,0 +1,25 @@
+.features_section {
+  height: auto;
+  padding-bottom: 3rem;
+
+  h1 {
+    text-align: center;
+  }
+
+  .description {
+    p {
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+
+  .feature_card_container {
+    margin: 1rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #f6f6f6;
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+}

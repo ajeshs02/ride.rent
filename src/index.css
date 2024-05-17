@@ -1,0 +1,79 @@
+@import './scss/fonts.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.scrollable-element {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'FiraSans', sans-serif;
+  font-weight: normal;
+}
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+figcaption {
+  text-decoration: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+}
+
+/* scrollbar styling */
+/* For Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(89, 88, 108);
+  border-radius: 10px;
+  border: 3px solid #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9b5d2d;
+}
+
+/* For Internet Explorer and Edge */
+body {
+  scrollbar-face-color: #888;
+  scrollbar-track-color: #f5f5f5;
+}
