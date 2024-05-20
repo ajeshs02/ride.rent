@@ -13,7 +13,15 @@ const VehicleCategories = () => {
   window.swiffyslider = swiffyslider
 
   window.addEventListener('load', () => {
+    const sliderElement = document.querySelector('.swiffy-slider')
     window.swiffyslider.init()
+
+    // Stop autoplay after the first cycle
+    const stopAutoplay = () => {
+      window.swiffyslider.stopAutoPlay()
+    }
+
+    sliderElement.addEventListener('swiffyslider.slideEnd', stopAutoplay)
   })
 
   // Handle card selection
@@ -27,20 +35,9 @@ const VehicleCategories = () => {
     window.swiffyslider.slideTo(sliderElement, selectedCardIndex)
   }
 
-  // Scroll to selected card
-  useEffect(() => {
-    if (selectedCard !== null) {
-      const selectedCardIndex = VEHICLE_CATEGORIES.findIndex(
-        (item) => item.id === selectedCard
-      )
-      const sliderElement = document.querySelector('.swiffy-slider')
-      window.swiffyslider.slideTo(sliderElement, selectedCardIndex)
-    }
-  }, [selectedCard])
-
   return (
     <div
-      className="landing-container swiffy-slider  slider-nav-autoplay"
+      className="landing-container swiffy-slider  slider-nav-autoplay slider-nav-autopause"
       data-slider-nav-autoplay-interval="2000"
     >
       <div className="slider-container" id="slider2">
@@ -51,13 +48,13 @@ const VehicleCategories = () => {
               selectedCard === category.id ? 'selected' : ''
             }`}
             onClick={() => {
-              handleCardSelect(category)
+              setSelectedType(category)
               handleCardSelect(category.id)
             }}
           >
             <div
               className={`category_icon_container ${
-                selectedType.value === category.value ? 'yellow_gradient' : ''
+                selectedType.value === category.value ? 'yellow-gradient' : ''
               }`}
             >
               <img
@@ -70,15 +67,6 @@ const VehicleCategories = () => {
           </div>
         ))}
       </div>
-      {/*
-      <button type="button" className="slider-nav"></button>
-      <button type="button" className="slider-nav slider-nav-next"></button>
-
-      <div className="slider-indicators">
-        <button className="active"></button>
-        <button></button>
-        <button></button>
-      </div> */}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import './SubCard.scss'
 import { FaWhatsappSquare } from 'react-icons/fa'
 import { ImMail } from 'react-icons/im'
-import SampleCar from '../../../../assets/img/sample car.webp'
+import SampleCar from '../../../../assets/img/sample2.jpg'
 import SampleProfile from '../../../../assets/img/sampleprofile.jpg'
 import { Rating } from 'react-simple-star-rating'
 import { GiCarSeat, GiGearStickPattern, GiSteeringWheel } from 'react-icons/gi'
@@ -13,7 +13,7 @@ const SubCard = () => {
   const whatsappUrl = `https://wa.me/918089808277`
 
   return (
-    <div className="sub_card_container ">
+    <div className="sub_card_container slide-visible ">
       {/* card top */}
       <div className="card_top">
         <figure className="image_box">

@@ -18,6 +18,7 @@ body {
   padding: 0;
   font-family: 'FiraSans', sans-serif;
   font-weight: normal;
+  background-color: #f2f7f6;
 }
 ul,
 ol,
@@ -40,7 +41,8 @@ li {
 }
 
 figure,
-figcaption {
+figcaption,
+a {
   text-decoration: none;
 }
 

@@ -1,7 +1,7 @@
 import './Recommended.scss'
 
 import ViewAllButton from '../../Button/ViewAllButton'
-import RecommendedCard from '../../Card/Recommended Card/RecommendedCard'
+import RecommendedCard from '../../Card/Vehicle Card/Recommended Card/RecommendedCard'
 
 const Recommended = () => {
   return (

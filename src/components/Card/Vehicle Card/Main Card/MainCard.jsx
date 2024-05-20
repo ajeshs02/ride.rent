@@ -1,7 +1,7 @@
 import './MainCard.scss'
 import { FaWhatsappSquare } from 'react-icons/fa'
 import { ImMail } from 'react-icons/im'
-import SampleCar from '../../../../assets/img/sample car.webp'
+import SampleCar from '../../../../assets/img/sample1.jpg'
 import SampleProfile from '../../../../assets/img/sampleprofile.jpg'
 import { Rating } from 'react-simple-star-rating'
 import { GiCarSeat, GiGearStickPattern, GiSteeringWheel } from 'react-icons/gi'
@@ -9,14 +9,11 @@ import { IoLocationOutline, IoSpeedometerOutline } from 'react-icons/io5'
 import { BsFuelPumpFill } from 'react-icons/bs'
 import { FaRegCalendarDays } from 'react-icons/fa6'
 
-const MainCard = ({
-  car = { name: 'hai', description: 'hello' },
-  mobileNumber,
-}) => {
+const MainCard = () => {
   const whatsappUrl = `https://wa.me/918089808277`
 
   return (
-    <div className="car_card_container">
+    <div className="car_card_container slide-visible">
       {/* card top */}
       <div className="card_top">
         <figure className="image_box">

@@ -13,12 +13,11 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.yellow_gradient {
+.yellow-gradient {
   background: $gradient;
 }
 
-.wrapper {
-  // Default padding for small screens and above
+.padding {
   padding-left: 1rem !important;
   padding-right: 1rem !important;
 
@@ -45,4 +44,9 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+.wrapper {
+  @extend .padding;
+  margin-bottom: 2rem;
 }

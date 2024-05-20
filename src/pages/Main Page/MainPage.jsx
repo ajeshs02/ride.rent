@@ -1,4 +1,4 @@
-import Convenient from '../../components/Main Page/VehicleTypes/VehicleTypes'
+import VehicleTypes from '../../components/Main Page/VehicleTypes/VehicleTypes'
 import Landing from '../../components/Main Page/Landing/Landing'
 import Navbar from '../../components/Navbar/Navbar'
 import Location from '../../components/Main Page/Locations/Locations'
@@ -7,23 +7,29 @@ import Recommended from '../../components/Main Page/Recommended/Recommended'
 import Features from '../../components/Main Page/Features/Features'
 import Documents from '../../components/Main Page/Documents/Documents'
 import TopBrands from '../../components/Main Page/Top Brands/TopBrands'
-import CarSection from '../../components/Main Page/Car section/CarSection'
 import FAQ from '../../components/Main Page/FAQ/FAQ'
+import Footer from '../../components/Main Page/Footer/Footer'
+import Latest from '../../components/Main Page/Latest/Latest'
+import Affordable from '../../components/Main Page/Affordable/Affordable'
+import NewlyArrived from '../../components/Main Page/Newly Arrived/NewlyArrived'
 
 const MainPage = () => {
   return (
     <>
       <Navbar />
       <Landing />
-      {/* <Convenient /> */}
-      {/* <MostPopular /> */}
+      <VehicleTypes />
+      <MostPopular />
       <TopBrands />
-      <CarSection />
-      {/* <Location /> */}
-      {/* <Recommended /> */}
+      <Latest />
+      <Affordable />
+      <NewlyArrived />
+      <Location />
+      <Recommended />
       {/* <Features /> */}
       <Documents />
       <FAQ />
+      <Footer />
     </>
   )
 }

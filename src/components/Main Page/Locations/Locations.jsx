@@ -1,6 +1,5 @@
 import './Locations.scss'
 import { LOCATION_TYPES } from '.'
-import { GoArrowRight } from 'react-icons/go'
 import ViewAllButton from '../../Button/ViewAllButton'
 
 const Location = () => {

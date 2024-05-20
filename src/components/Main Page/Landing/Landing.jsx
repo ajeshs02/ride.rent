@@ -1,22 +1,31 @@
+import { useEffect, useState } from 'react'
+import { useAppContext } from '../../../context/AppContext'
 import VehicleCategories from '../Vehicle Categories/VehicleCategories'
 import './Landing.scss'
 import { FaRegThumbsUp } from 'react-icons/fa'
 
 const Landing = () => {
+  const { selectedType } = useAppContext()
+
   return (
-    <section className="lading_section ">
-      <div className="landing_top">
-        <div className="landing_bg">
-          <div className="landing_text_container">
+    <section className="lading-section  ">
+      <div className="landing-top">
+        <div
+          className={`landing-bg`}
+          style={{
+            backgroundImage: `url('/${selectedType.value}.webp')`,
+          }}
+        >
+          <div className="landing-text-container">
             <p className="trust">
               <FaRegThumbsUp />
               Most Trusted Car Rental Services In Dubai!
             </p>
-            <div id="type_scroll">
+            <div>
               <p>Best Prices & No Commission</p>
               <p>More than 1000+ options to choose from...</p>
             </div>
-            <button id="view_all_cars" className="btn yellow_gradient">
+            <button id="view-all-cars" className="btn yellow-gradient">
               View all cars
             </button>
           </div>
@@ -24,7 +33,7 @@ const Landing = () => {
         {/* Vehicle categories component */}
         <VehicleCategories />
       </div>
-      <div className="landing_bottom">
+      <div className="landing-bottom">
         <p>
           <span>Ride.Rent</span> ensures that you have access to the best and
           <span> most affordable car rental services in Dubai. </span>

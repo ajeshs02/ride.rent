@@ -1,6 +1,5 @@
 import './RecommendedCard.scss'
-import SampleCar from '../../../assets/img/sample car.webp'
-import SampleProfile from '../../../assets/img/sampleprofile.jpg'
+import SampleCar from '../../../../assets/img/sample car.webp'
 import { Rating } from 'react-simple-star-rating'
 import { GiCarSeat, GiGearStickPattern, GiSteeringWheel } from 'react-icons/gi'
 import { IoSpeedometerOutline } from 'react-icons/io5'

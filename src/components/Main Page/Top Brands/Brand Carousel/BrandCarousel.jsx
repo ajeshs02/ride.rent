@@ -33,14 +33,14 @@ const BrandsCarousel = ({ brands }) => {
 
   return (
     <div
-      className="brand-container swiffy-slider slider-item-show2 slider-item-reveal slider-item-snapstart slider-nav-caretfill slider-nav-dark slider-nav-outside-expand container slider-nav-autoplay slider-nav-autopause slider-indicators-dark slider-indicators-outside slider-indicators-sm slider-nav-animation "
+      className="brand-container swiffy-slider slider-item-show3 slider-item-show2-sm slider-nav-caretfill slider-nav-dark slider-nav-sm slider-nav-outside slider-nav-autopause slider-indicators-dark slider-indicators-outside slider-indicators-sm slider-nav-animation slider-nav-autoplay slider-nav-autopause slider-nav-animation-appear slider-nav-animation-fast"
       data-slider-nav-autoplay-interval="2000"
     >
       <div className="slider-container" id="slider2">
         {brands.map((brand) => (
           <div
             key={brand.id}
-            className={`brand-card ${
+            className={`brand-card slide-visible ${
               selectedCard === brand.id ? 'selected' : ''
             }`}
             onClick={() => handleCardSelect(brand.id)}

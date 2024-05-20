@@ -25,8 +25,8 @@ const Navbar = () => {
           >
             <GiHamburgerMenu className={` hamburger-icon `} />
           </button>
-          <div className="logo_container">
-            <div href="index.html" className="header_logo">
+          <div className="logo-container">
+            <div href="index.html" className="header-logo">
               <figure>
                 <img src={logo} className="header-img" alt="Ride Rent Logo" />
                 <figcaption>
@@ -34,13 +34,6 @@ const Navbar = () => {
                 </figcaption>
               </figure>
             </div>
-            {/* <a href="index.html" className="">
-            <img
-              src="assets/img/logo-small.png"
-              className="img-fluid"
-              alt="Logo"
-            />
-          </a> */}
           </div>
         </div>
         <div className="nav-items-container">
@@ -68,7 +61,7 @@ const Navbar = () => {
             </li>
 
             <li className="list_btn">
-              <button className="yellow_gradient btn">
+              <button className="yellow-gradient btn">
                 List your vehicle for FREE
               </button>
             </li>
