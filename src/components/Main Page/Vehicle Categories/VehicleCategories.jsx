@@ -1,28 +1,11 @@
 import './VehicleCategories.scss'
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../../../context/AppContext'
-import { swiffyslider } from 'swiffy-slider'
-import 'swiffy-slider/css'
 import { VEHICLE_CATEGORIES } from '.'
 
 const VehicleCategories = () => {
   const { selectedType, setSelectedType } = useAppContext()
   const [selectedCard, setSelectedCard] = useState(null)
-
-  // Initialize Swiffy Slider
-  window.swiffyslider = swiffyslider
-
-  window.addEventListener('load', () => {
-    const sliderElement = document.querySelector('.swiffy-slider')
-    window.swiffyslider.init()
-
-    // Stop autoplay after the first cycle
-    const stopAutoplay = () => {
-      window.swiffyslider.stopAutoPlay()
-    }
-
-    sliderElement.addEventListener('swiffyslider.slideEnd', stopAutoplay)
-  })
 
   // Handle card selection
   const handleCardSelect = (categoryId) => {

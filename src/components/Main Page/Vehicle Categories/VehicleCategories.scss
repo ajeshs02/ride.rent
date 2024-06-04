@@ -4,27 +4,27 @@
   max-width: 90%;
   height: fit-content;
   border-radius: 0.6rem;
-  padding: 0.1rem 0.6rem;
+  padding: 0rem 0.6rem;
   background-color: white;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 3rem;
+  bottom: 2.3rem;
   margin-left: auto;
   margin-right: auto;
 
   .slider-container {
     display: flex;
     gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.3rem 0.4rem 0.1rem;
   }
 
   .vehicle_category_card {
     height: 80%;
-    width: 4.5rem;
-    min-width: 4.5rem;
+    width: 4.2rem;
+    min-width: 4.2rem;
     aspect-ratio: 1;
     border-radius: 1rem;
     display: flex;
@@ -51,7 +51,7 @@
     p {
       color: rgb(93, 93, 93);
       text-align: center;
-      font-size: 11px;
+      font-size: 0.56rem;
       white-space: nowrap;
     }
   }
@@ -68,46 +68,23 @@
 /*  (min-width: 768px) and above */
 @media (min-width: 768px) {
   .landing-container {
-    width: fit-content;
     max-width: fit-content;
 
     .slider-container {
-      display: flex;
-      gap: 0.5rem;
-      padding: 0.5rem;
+      padding: 0.3rem 0.4rem 0.2rem;
     }
 
     .vehicle_category_card {
-      height: 80%;
       width: 5rem;
       min-width: 5rem;
-      aspect-ratio: 1;
-      border-radius: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.2rem;
-      overflow: hidden;
-      cursor: pointer;
-
       .category_icon_container {
-        height: 70%;
-        width: 100%;
-        border-radius: 1rem;
-        background-color: rgb(241, 241, 241);
-        display: flex;
-        justify-content: center;
-        align-items: center;
         .vehicle_category_logo {
           scale: 1.5;
-          transition: all 0.2s ease-out;
         }
       }
 
       p {
-        color: rgb(93, 93, 93);
-        text-align: center;
-        font-size: 13px;
+        font-size: 0.68rem;
       }
     }
 
@@ -123,4 +100,11 @@
 
 /* (min-width: 1024px) and above */
 @media (min-width: 1024px) {
+  .landing-container {
+    .vehicle_category_card {
+      p {
+        font-size: 0.81rem;
+      }
+    }
+  }
 }

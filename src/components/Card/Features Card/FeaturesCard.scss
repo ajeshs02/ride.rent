@@ -1,11 +1,18 @@
 @import '../../../scss/variables';
 
+/* Default styles for mobile devices and above */
 .features_card {
   display: flex;
-  padding: 0.3rem;
+  padding: 0.7rem;
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 0.8rem;
+  width: auto;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 13rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
   .feature_icon {
     width: 100%;
@@ -36,10 +43,22 @@
 
   h3 {
     text-align: center;
-    margin: 1rem;
+    margin: 0.6rem;
   }
   p {
     text-align: center;
     font-size: small;
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
+
+/*  (min-width: 768px) and above */
+@media (min-width: 768px) {
+}
+
+/* (min-width: 1024px) and above */
+@media (min-width: 1024px) {
 }

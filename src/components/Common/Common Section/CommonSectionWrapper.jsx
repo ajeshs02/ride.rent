@@ -10,13 +10,24 @@ const CommonSectionWrapper = ({ children }) => {
         {children}
       </div>
 
-      <button type="button" className="slider-nav"></button>
-      <button type="button" className="slider-nav slider-nav-next"></button>
+      <button
+        type="button"
+        aria-label="carousel navigation button"
+        className="slider-nav"
+      ></button>
+      <button
+        type="button"
+        aria-label="carousel navigation button"
+        className="slider-nav slider-nav-next"
+      ></button>
 
       <div className="slider-indicators">
-        <button className="active"></button>
-        <button></button>
-        <button></button>
+        <button
+          aria-label="carousel navigation button"
+          className="active"
+        ></button>
+        <button aria-label="carousel navigation button"></button>
+        <button aria-label="carousel navigation button"></button>
       </div>
     </div>
   )

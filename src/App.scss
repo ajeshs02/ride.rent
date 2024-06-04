@@ -1,6 +1,14 @@
 @import './scss/variables';
 
-.btn {
+/* Default styles for mobile devices and above */
+
+/*  (min-width: 768px) and above */
+@media (min-width: 768px) {}
+
+/* (min-width: 1024px) and above */
+@media (min-width: 1024px) {}
+
+.default-btn {
   padding: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -48,5 +56,5 @@
 
 .wrapper {
   @extend .padding;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }

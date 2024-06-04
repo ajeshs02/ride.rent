@@ -6,6 +6,7 @@ import { MdManageSearch } from 'react-icons/md'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from 'react'
 import Sidebar from '../Sidebar/Sidebar'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -15,8 +16,8 @@ const Navbar = () => {
   }
 
   return (
-    <header className="header wrapper">
-      <nav className="">
+    <header className="header padding">
+      <nav className="nav-container">
         <div className="nav-left">
           <button
             aria-label="Hamburger"
@@ -26,14 +27,14 @@ const Navbar = () => {
             <GiHamburgerMenu className={` hamburger-icon `} />
           </button>
           <div className="logo-container">
-            <div href="index.html" className="header-logo">
+            <Link to={'/'} className="header-logo">
               <figure>
                 <img src={logo} className="header-img" alt="Ride Rent Logo" />
                 <figcaption>
                   Quick way to get a <span>Ride On Rent</span>
                 </figcaption>
               </figure>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="nav-items-container">
@@ -61,7 +62,7 @@ const Navbar = () => {
             </li>
 
             <li className="list_btn">
-              <button className="yellow-gradient btn">
+              <button className="yellow-gradient default-btn">
                 List your vehicle for FREE
               </button>
             </li>

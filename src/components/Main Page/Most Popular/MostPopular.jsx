@@ -2,38 +2,9 @@ import './MostPopular.scss'
 import ViewAllButton from '../../Button/ViewAllButton'
 import { useAppContext } from '../../../context/AppContext'
 import MainCard from '../../Card/Vehicle Card/Main Card/MainCard'
-import { useEffect, useState } from 'react'
-import { swiffyslider } from 'swiffy-slider'
-import 'swiffy-slider/css'
 
 const MostPopular = () => {
   const { selectedType, selectedLocation } = useAppContext()
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768)
-
-  window.swiffyslider = swiffyslider
-
-  window.addEventListener('load', () => {
-    window.swiffyslider.init()
-  })
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsSmallScreen(window.innerWidth < 768)
-  //   }
-
-  //   window.addEventListener('resize', handleResize)
-
-  //   if (isSmallScreen) {
-  //     window.swiffyslider = swiffyslider
-  //     window.swiffyslider.init()
-  //   } else if (!isSmallScreen && window.swiffyslider) {
-  //     document.querySelector('.swiffy-slider').classList.remove('swiffy-slider')
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize)
-  //   }
-  // }, [isSmallScreen])
 
   return (
     <section className="popular-section wrapper">
@@ -55,13 +26,24 @@ const MostPopular = () => {
           <MainCard />
         </div>
 
-        <button type="button" className="slider-nav"></button>
-        <button type="button" className="slider-nav slider-nav-next"></button>
+        <button
+          type="button"
+          aria-label="carousel navigation button"
+          className="slider-nav"
+        ></button>
+        <button
+          type="button"
+          aria-label="carousel navigation button"
+          className="slider-nav slider-nav-next"
+        ></button>
 
         <div className="slider-indicators">
-          <button className="active"></button>
-          <button></button>
-          <button></button>
+          <button
+            aria-label="carousel navigation button"
+            className="active"
+          ></button>
+          <button aria-label="carousel navigation button"></button>
+          <button aria-label="carousel navigation button"></button>
         </div>
       </div>
       <ViewAllButton value={'Cars'} />

@@ -1,0 +1,59 @@
+/* Default styles for mobile devices and above */
+.vehicle-details-section {
+  height: auto;
+  min-height: 100vh;
+  padding-top: 1rem;
+
+  // heading container
+  .heading-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      color: rgb(83, 83, 83);
+      width: 80%;
+      font-size: 15px;
+    }
+
+    .location-container {
+      display: flex;
+      column-gap: 0.1rem;
+      font-size: 15px;
+      color: rgb(91, 91, 91);
+
+      .location {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 1rem;
+        column-gap: 0.3rem;
+
+      }
+
+      span {
+        font-weight: 500;
+        color: rgb(37, 37, 37);
+        margin-right: 0.3rem;
+      }
+    }
+
+  }
+
+
+  // Details Container
+  .details-container {
+    display: flex;
+  }
+}
+
+
+/*  (min-width: 768px) and above */
+@media (min-width: 768px) {}
+
+/* (min-width: 1024px) and above */
+@media (min-width: 1024px) {}

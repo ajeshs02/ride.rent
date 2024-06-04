@@ -1,36 +1,88 @@
+import React, { Suspense } from 'react'
 import VehicleTypes from '../../components/Main Page/VehicleTypes/VehicleTypes'
 import Landing from '../../components/Main Page/Landing/Landing'
-import Navbar from '../../components/Navbar/Navbar'
-import Location from '../../components/Main Page/Locations/Locations'
 import MostPopular from '../../components/Main Page/Most Popular/MostPopular'
-import Recommended from '../../components/Main Page/Recommended/Recommended'
-import Features from '../../components/Main Page/Features/Features'
-import Documents from '../../components/Main Page/Documents/Documents'
-import TopBrands from '../../components/Main Page/Top Brands/TopBrands'
-import FAQ from '../../components/Main Page/FAQ/FAQ'
-import Footer from '../../components/Main Page/Footer/Footer'
-import Latest from '../../components/Main Page/Latest/Latest'
-import Affordable from '../../components/Main Page/Affordable/Affordable'
-import NewlyArrived from '../../components/Main Page/Newly Arrived/NewlyArrived'
+
+// Lazy Loaded Component
+const LazyLocation = React.lazy(() =>
+  import('../../components/Main Page/Locations/Locations')
+)
+const LazyRecommended = React.lazy(() =>
+  import('../../components/Main Page/Recommended/Recommended')
+)
+const LazyFeatures = React.lazy(() =>
+  import('../../components/Main Page/Features/Features')
+)
+const LazyDocuments = React.lazy(() =>
+  import('../../components/Main Page/Documents/Documents')
+)
+const LazyTopBrands = React.lazy(() =>
+  import('../../components/Main Page/Top Brands/TopBrands')
+)
+const LazyLatest = React.lazy(() =>
+  import('../../components/Main Page/Latest/Latest')
+)
+const LazyAffordable = React.lazy(() =>
+  import('../../components/Main Page/Affordable/Affordable')
+)
+const LazyNewlyArrived = React.lazy(() =>
+  import('../../components/Main Page/Newly Arrived/NewlyArrived')
+)
+const LazyWhyOpt = React.lazy(() =>
+  import('../../components/Common/Why Opt/WhyOpt')
+)
+const LazyFAQ = React.lazy(() => import('../../components/Common/FAQ/FAQ'))
+
+// carousel import for main page
+import { swiffyslider } from 'swiffy-slider'
+import 'swiffy-slider/css'
+import LazyLoad from '../../components/Skelton/Lazy Load/LazyLoad'
 
 const MainPage = () => {
+  window.swiffyslider = swiffyslider
+
+  window.addEventListener('load', () => {
+    window.swiffyslider.init()
+  })
+
   return (
     <>
-      <Navbar />
       <Landing />
       <VehicleTypes />
       <MostPopular />
-      <TopBrands />
-      <Latest />
-      <Affordable />
-      <NewlyArrived />
-      <Location />
-      <Recommended />
-      {/* <Features /> */}
-      <Documents />
-      <FAQ />
-      <Footer />
+
+      <Suspense fallback={<LazyLoad />}>
+        <LazyLocation />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyRecommended />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyFeatures />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyDocuments />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyTopBrands />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyLatest />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyAffordable />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyNewlyArrived />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyWhyOpt />
+      </Suspense>
+      <Suspense fallback={<LazyLoad />}>
+        <LazyFAQ />
+      </Suspense>
     </>
   )
 }
+
 export default MainPage

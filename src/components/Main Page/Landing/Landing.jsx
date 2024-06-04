@@ -7,16 +7,55 @@ import { FaRegThumbsUp } from 'react-icons/fa'
 const Landing = () => {
   const { selectedType } = useAppContext()
 
+  const [isIphone, setIsIphone] = useState(false)
+  const [backgroundImage, setBackgroundImage] = useState(
+    '/cars-placeholder.webp'
+  )
+
+  useEffect(() => {
+    // Check if the device is an iPhone
+    const isIphone = /iPhone/i.test(navigator.userAgent)
+    setIsIphone(isIphone)
+
+    const loadImage = async () => {
+      try {
+        setTimeout(async () => {
+          const module = await import(
+            `../../../assets/img/bg/${selectedType.value}.webp`
+          )
+          const img = new Image()
+          img.src = module.default
+          img.onload = () => {
+            setBackgroundImage(module.default)
+          }
+        }, 300)
+      } catch (error) {
+        console.error('Failed to load image:', error)
+      }
+    }
+
+    loadImage()
+  }, [selectedType])
+
   return (
     <section className="lading-section  ">
       <div className="landing-top">
+        {/* mobile visible button */}
+        <button className="yellow-gradient default-btn list-btn">
+          List your vehicle for FREE
+        </button>
+        {/* landing top */}
         <div
-          className={`landing-bg`}
+          className={`landing-bg `}
           style={{
-            backgroundImage: `url('/${selectedType.value}.webp')`,
+            backgroundImage: `url(${backgroundImage})`,
           }}
         >
-          <div className="landing-text-container">
+          <div
+            className={`landing-text-container ${
+              isIphone ? 'iphone-style' : ''
+            }`}
+          >
             <p className="trust">
               <FaRegThumbsUp />
               Most Trusted Car Rental Services In Dubai!
@@ -25,7 +64,7 @@ const Landing = () => {
               <p>Best Prices & No Commission</p>
               <p>More than 1000+ options to choose from...</p>
             </div>
-            <button id="view-all-cars" className="btn yellow-gradient">
+            <button id="view-all-cars" className="default-btn yellow-gradient">
               View all cars
             </button>
           </div>

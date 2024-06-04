@@ -1,0 +1,32 @@
+@import '../../../scss/variables';
+
+.popular_section {
+  min-height: fit-content;
+  height: auto;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $gray_bg;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 1.7rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 1.7rem;
+    font-weight: bold;
+  }
+
+  .sub-card-container {
+    width: 100%;
+    .slider-container {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}

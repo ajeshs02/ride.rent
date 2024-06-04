@@ -10,7 +10,7 @@ const RecommendedCard = ({}) => {
   const whatsappUrl = `https://wa.me/918089808277`
 
   return (
-    <div className="recommended_card_container">
+    <div className="recommended_card_container slide-visible">
       {/* card top */}
       <div className="card_top">
         <figure className="image_box">

@@ -8,12 +8,21 @@ import { GiCarSeat, GiGearStickPattern, GiSteeringWheel } from 'react-icons/gi'
 import { IoLocationOutline, IoSpeedometerOutline } from 'react-icons/io5'
 import { BsFuelPumpFill } from 'react-icons/bs'
 import { FaRegCalendarDays } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const MainCard = () => {
-  const whatsappUrl = `https://wa.me/918089808277`
+  // 8089808277
+  const phoneNumber = '919895765329'
+  const message =
+    'https://youtu.be/Fqpdu55dFxU?si=Ls-4_XFw4VHf0h6L\n\nHello Adithyan, I would like to connect with you.'
+  const encodedMessage = encodeURIComponent(message)
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
 
   return (
-    <div className="car_card_container slide-visible">
+    <Link
+      to={`/details/${'12345'}`}
+      className="car_card_container slide-visible"
+    >
       {/* card top */}
       <div className="card_top">
         <figure className="image_box">
@@ -70,12 +79,19 @@ const MainCard = () => {
             <span>Available now for chat</span>
           </div>
           <div className="icons">
-            <FaWhatsappSquare className="icon whatsapp" />
+            <a
+              href={whatsappUrl}
+              aria-label="whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsappSquare className="icon whatsapp" />
+            </a>
             <ImMail className="icon mail" />
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
