@@ -5,14 +5,30 @@ const AppContext = createContext()
 const useAppContext = () => useContext(AppContext)
 
 const AppProvider = ({ children }) => {
+  // vehicle type
   const [selectedType, setSelectedType] = useState({
     name: 'Cars',
-    value: 'cars',
+    value: 'car',
   })
 
+  // selected location
   const [selectedLocation, setSelectedLocation] = useState({
     name: 'Dubai',
     value: 'dubai',
+  })
+
+  // global state for listing page filter
+  const [selectedFilters, setSelectedFilters] = useState({
+    modelYear: [],
+    vehicleType: ['cars'],
+    vehicleSubType: [],
+    carCategories: [],
+    seats: [],
+    paymentMode: [],
+    transmission: [],
+    fuelType: [],
+    brand: [],
+    color: [],
   })
 
   return (
@@ -22,6 +38,8 @@ const AppProvider = ({ children }) => {
         setSelectedType,
         selectedLocation,
         setSelectedLocation,
+        selectedFilters,
+        setSelectedFilters,
       }}
     >
       {children}

@@ -6,14 +6,18 @@ import SportsBikes from '../../../assets/img/vehicle categories/Sports Bikes.svg
 import LeisureBoats from '../../../assets/img/vehicle categories/Leisure Boats.svg'
 import Yachts from '../../../assets/img/vehicle categories/Yachts.svg'
 import Charters from '../../../assets/img/vehicle categories/Charters.svg'
+import Vans from '../../../assets/img/vehicle categories/Van.svg'
+import Buses from '../../../assets/img/vehicle categories/Bus.svg'
 
 export const VEHICLE_CATEGORIES = [
-  { id: 1, icon: CarsIcon, name: 'Cars', value: 'cars' },
-  { id: 2, icon: SportsCarsIcon, name: 'Sports Cars', value: 'sports_cars' },
-  { id: 3, icon: Cycles, name: 'Cycles', value: 'cycles' },
-  { id: 4, icon: MotorCycles, name: 'Motorcycles', value: 'motorcycles' },
-  { id: 5, icon: SportsBikes, name: 'Sports Bikes', value: 'sports_bikes' },
-  { id: 6, icon: LeisureBoats, name: 'Leisure Boats', value: 'leisure_boats' },
-  { id: 7, icon: Yachts, name: 'Yachts', value: 'yachts' },
-  { id: 8, icon: Charters, name: 'Charters', value: 'charters' },
+  { id: 1, icon: CarsIcon, name: 'Cars', value: 'car' },
+  { id: 2, icon: SportsCarsIcon, name: 'Sports Cars', value: 'sports_car' },
+  { id: 3, icon: Cycles, name: 'Cycles', value: 'cycle' },
+  { id: 4, icon: MotorCycles, name: 'Motorcycles', value: 'motorcycle' },
+  { id: 5, icon: SportsBikes, name: 'Sports Bikes', value: 'sports_bike' },
+  { id: 6, icon: LeisureBoats, name: 'Leisure Boats', value: 'leisure_boat' },
+  { id: 7, icon: Yachts, name: 'Yachts', value: 'yacht' },
+  { id: 8, icon: Vans, name: 'Vans', value: 'van' },
+  { id: 9, icon: Buses, name: 'Buses', value: 'bus' },
+  { id: 10, icon: Charters, name: 'Charters', value: 'charter' },
 ]

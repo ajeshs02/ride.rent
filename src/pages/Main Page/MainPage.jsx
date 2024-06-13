@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import VehicleTypes from '../../components/Main Page/VehicleTypes/VehicleTypes'
 import Landing from '../../components/Main Page/Landing/Landing'
 import MostPopular from '../../components/Main Page/Most Popular/MostPopular'
@@ -39,11 +39,12 @@ import 'swiffy-slider/css'
 import LazyLoad from '../../components/Skelton/Lazy Load/LazyLoad'
 
 const MainPage = () => {
-  window.swiffyslider = swiffyslider
-
-  window.addEventListener('load', () => {
-    window.swiffyslider.init()
-  })
+  useEffect(() => {
+    window.swiffyslider = swiffyslider
+    window.addEventListener('load', () => {
+      window.swiffyslider.init()
+    })
+  }, [])
 
   return (
     <>

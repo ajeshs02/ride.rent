@@ -64,11 +64,11 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #ffffff00;
+  background-color: #87878700;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(89, 88, 108);
+  background-color: #ffa733;
   border-radius: 10px;
   border: 3px solid #f5f5f5;
 }

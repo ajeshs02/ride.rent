@@ -1,6 +1,5 @@
 import './RecommendedCard.scss'
 import SampleCar from '../../../../assets/img/sample car.webp'
-import { Rating } from 'react-simple-star-rating'
 import { GiCarSeat, GiGearStickPattern, GiSteeringWheel } from 'react-icons/gi'
 import { IoSpeedometerOutline } from 'react-icons/io5'
 import { BsFuelPumpFill } from 'react-icons/bs'
@@ -24,10 +23,6 @@ const RecommendedCard = ({}) => {
         {/* title */}
         <div className="title_box">
           <h3>Toyota Campy SE 350</h3>
-          <div className="rating_box">
-            <Rating readonly initialValue={4} className="rating" size={15} />
-            (4)
-          </div>
         </div>
         {/* features */}
         <div className="features_grid">

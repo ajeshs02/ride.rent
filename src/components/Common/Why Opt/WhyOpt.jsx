@@ -1,5 +1,6 @@
-import Cities from '../Cities/Cities'
 import './WhyOpt.scss'
+import Cities from '../Cities/Cities'
+
 const WhyOpt = () => {
   return (
     <section className="wrapper why-opt-section">

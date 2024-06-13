@@ -3,7 +3,6 @@ import { FaWhatsappSquare } from 'react-icons/fa'
 import { ImMail } from 'react-icons/im'
 import SampleCar from '../../../../assets/img/sample2.jpg'
 import SampleProfile from '../../../../assets/img/sampleprofile.jpg'
-import { Rating } from 'react-simple-star-rating'
 import { GiCarSeat, GiGearStickPattern, GiSteeringWheel } from 'react-icons/gi'
 import { IoLocationOutline, IoSpeedometerOutline } from 'react-icons/io5'
 import { BsFuelPumpFill } from 'react-icons/bs'
@@ -28,10 +27,6 @@ const SubCard = () => {
         {/* title */}
         <div className="title_box">
           <h3>Toyota Campy SE 350</h3>
-          <div className="rating_box">
-            <Rating readonly initialValue={4} className="rating" size={15} />
-            (4)
-          </div>
         </div>
         {/* features */}
         <div className="features_grid">

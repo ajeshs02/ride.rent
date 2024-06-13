@@ -3,7 +3,6 @@ import { FaWhatsappSquare } from 'react-icons/fa'
 import { ImMail } from 'react-icons/im'
 import SampleCar from '../../../../assets/img/sample1.jpg'
 import SampleProfile from '../../../../assets/img/sampleprofile.jpg'
-import { Rating } from 'react-simple-star-rating'
 import { GiCarSeat, GiGearStickPattern, GiSteeringWheel } from 'react-icons/gi'
 import { IoLocationOutline, IoSpeedometerOutline } from 'react-icons/io5'
 import { BsFuelPumpFill } from 'react-icons/bs'
@@ -37,11 +36,8 @@ const MainCard = () => {
         {/* title */}
         <div className="title_box">
           <h2>Toyota Campy SE 350</h2>
-          <div className="rating_box">
-            <Rating readonly initialValue={4} className="rating" size={15} />
-            (4)
-          </div>
         </div>
+
         {/* vehicle features grid */}
         <div className="features_grid">
           <div>
@@ -79,14 +75,14 @@ const MainCard = () => {
             <span>Available now for chat</span>
           </div>
           <div className="icons">
-            <a
+            <div
               href={whatsappUrl}
               aria-label="whatsapp"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaWhatsappSquare className="icon whatsapp" />
-            </a>
+            </div>
             <ImMail className="icon mail" />
           </div>
         </div>

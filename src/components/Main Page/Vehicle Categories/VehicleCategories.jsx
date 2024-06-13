@@ -1,5 +1,5 @@
 import './VehicleCategories.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useAppContext } from '../../../context/AppContext'
 import { VEHICLE_CATEGORIES } from '.'
 

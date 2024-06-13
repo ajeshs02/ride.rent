@@ -16,7 +16,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className="header padding">
+    <header className="header padding main-wrapper">
       <nav className="nav-container">
         <div className="nav-left">
           <button

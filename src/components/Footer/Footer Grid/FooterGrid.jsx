@@ -4,7 +4,7 @@ import { locations, company, vehicles, quick_links } from '.'
 
 const FooterGrid = () => {
   return (
-    <div className="footer-grid wrapper">
+    <div className="footer-grid wrapper ">
       <div className="footer-section">
         {/* locations  link */}
         <h3 className="heading">Locations</h3>

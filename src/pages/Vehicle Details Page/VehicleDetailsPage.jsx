@@ -7,13 +7,19 @@ import Specification from './Specifications/Specification'
 import Images from './vehicle images/Images'
 import Social from './Social Media Links/Social'
 import { IoLocationOutline } from 'react-icons/io5'
+import MobileProfileCard from '../../components/Card/Mobile Profile Card/MobileProfileCard'
+import { useRef } from 'react'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 
 const VehicleDetailsPage = () => {
+  const detailsSectionRef = useRef(null)
+  const isInViewPort = useIntersectionObserver(detailsSectionRef)
+
   return (
     <section className="vehicle-details-section wrapper">
       {/* Details heading */}
       <div className="heading-container">
-        <h1>{`Chevrolet Camaro`}</h1>
+        <h1 className="custom-heading">{`Chevrolet Camaro`}</h1>
         <p>
           Dubai Car Rental Convertible, 4 Seater, Premium Comfort, Heater and
           Ventilated Seats, Advanced OLED Display Technology.
@@ -28,30 +34,36 @@ const VehicleDetailsPage = () => {
       </div>
 
       {/* Vehicle Details*/}
-      <div className="details-container">
-        {/* container left */}
-        <div className="details">
-          {/* Images */}
-          <Images />
+      <section className="details-section" ref={detailsSectionRef}>
+        <div className="details-container">
+          {/* container left */}
+          <div className="details">
+            {/* Images */}
+            <Images />
 
-          {/* Specification */}
-          <Specification />
+            {/* Specification */}
+            <Specification />
 
-          {/* Features */}
-          <Features />
+            {/* Features */}
+            <Features />
+          </div>
 
-          {/* Description */}
-          <Description />
+          {/* container right */}
+          <div className="right">
+            {/* Profile */}
+            <ProfileCard />
+
+            {/* Profile Card for Mobile View */}
+            {isInViewPort && <MobileProfileCard />}
+
+            {/* Social Media Links */}
+            <Social />
+          </div>
         </div>
 
-        {/* container right */}
-        <div className="right">
-          {/* Profile */}
-          <ProfileCard />
-          {/* Social Media Links */}
-          <Social />
-        </div>
-      </div>
+        {/* Description */}
+        <Description />
+      </section>
 
       {/* Why Opt Ride.Rent and Available Locations */}
       <WhyOpt />

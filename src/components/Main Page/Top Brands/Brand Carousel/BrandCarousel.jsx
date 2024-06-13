@@ -1,12 +1,18 @@
+import { useEffect } from 'react'
 import './BrandCarousel.scss'
 
 const BrandsCarousel = ({ brands }) => {
+  useEffect(() => {
+    if (window.swiffyslider) {
+      window.swiffyslider.init()
+    }
+  }, [brands])
   return (
     <div
       className="brand-container swiffy-slider slider-item-show3 slider-item-show2-sm slider-nav-caretfill slider-nav-dark slider-nav-sm slider-nav-outside slider-nav-autopause slider-indicators-dark slider-indicators-outside slider-indicators-sm slider-nav-animation slider-nav-autoplay slider-nav-autopause slider-nav-animation-appear slider-nav-animation-fast"
       data-slider-nav-autoplay-interval="2000"
     >
-      <div className="slider-container" id="slider2">
+      <div className="slider-container">
         {brands.map((brand) => (
           <div key={brand.id} className={`brand-card slide-visible `}>
             <div className="image_box">
@@ -25,13 +31,13 @@ const BrandsCarousel = ({ brands }) => {
       </div>
 
       <button
-        aria-label="carousel navigation button"
         type="button"
+        aria-label="carousel navigation button"
         className="slider-nav"
       ></button>
       <button
-        aria-label="carousel navigation button"
         type="button"
+        aria-label="carousel navigation button"
         className="slider-nav slider-nav-next"
       ></button>
 

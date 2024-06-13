@@ -5,7 +5,7 @@ import logo from '../../assets/img/logo/header_logo_white.webp'
 import { FaRegCopyright } from 'react-icons/fa6'
 const Footer = () => {
   return (
-    <footer>
+    <footer className="">
       <FooterGrid />
       <Social />
 

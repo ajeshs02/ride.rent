@@ -28,7 +28,7 @@ const Landing = () => {
           img.onload = () => {
             setBackgroundImage(module.default)
           }
-        }, 300)
+        }, 0)
       } catch (error) {
         console.error('Failed to load image:', error)
       }

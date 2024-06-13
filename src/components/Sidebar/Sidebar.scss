@@ -4,6 +4,7 @@
   @media (min-width: 1024px) {
     display: none;
   }
+
   position: fixed;
   top: 0;
   width: 270px;
@@ -48,6 +49,7 @@
       img {
         width: 11rem;
       }
+
       span {
         color: black;
         font-style: italic;
@@ -86,5 +88,4 @@
 }
 
 /*  (min-width: 768px) and above */
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}

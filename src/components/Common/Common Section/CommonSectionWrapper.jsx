@@ -1,6 +1,12 @@
+import { useEffect } from 'react'
 import './CommonSectionWrapper.scss'
 
 const CommonSectionWrapper = ({ children }) => {
+  useEffect(() => {
+    if (window.swiffyslider) {
+      window.swiffyslider.init()
+    }
+  }, [])
   return (
     <div
       className="sub-card-container swiffy-slider slider-item-show3 slider-item-show2-sm slider-nav-caretfill slider-nav-dark slider-nav-sm slider-nav-outside  slider-indicators-dark  slider-indicators-outside slider-indicators-sm slider-nav-animation slider-nav-animation-appear slider-nav-animation-fast  "

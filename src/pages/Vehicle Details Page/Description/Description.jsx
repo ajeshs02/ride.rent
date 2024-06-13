@@ -2,7 +2,8 @@ import './Description.scss'
 
 const Description = () => {
   return (
-    <div>
+    <div className="description-section">
+      <h2 className="custom-heading">Description</h2>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industrys standard dummy text ever

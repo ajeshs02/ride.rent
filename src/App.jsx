@@ -5,20 +5,23 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 // Pages
 import MainPage from './pages/Main Page/MainPage'
-import ErrorPage from './pages/Not Found/NotFound'
 
 // general
 import { AppProvider } from './context/AppContext'
 import axios from 'axios'
 import Layout from './Layout/Layout'
 import NotFound from './pages/Not Found/NotFound'
+import ErrorPage from './pages/Error Page/ErrorPage'
 
 // Dynamic imports
 const VehicleDetailsPage = lazy(() =>
   import('./pages/Vehicle Details Page/VehicleDetailsPage')
 )
+const ListingPage = lazy(() => import('./pages/Listing Page/ListingPage'))
 const SignUp = lazy(() => import('./pages/Signup Page/SignUp'))
 const ResetPassword = lazy(() => import('./pages/Reset Password/ResetPassword'))
+
+// carousel import for main page
 
 axios.defaults.baseURL = import.meta.env.VITE_API_URL
 
@@ -33,7 +36,7 @@ const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
     element: <Layout />,
-    errorElement: <NotFound />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
@@ -42,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <VehicleDetailsPage />,
+      },
+      {
+        path: '/listing',
+        element: <ListingPage />,
       },
       {
         path: '/sign-up',
