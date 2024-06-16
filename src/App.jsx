@@ -12,6 +12,15 @@ import axios from 'axios'
 import Layout from './Layout/Layout'
 import NotFound from './pages/Not Found/NotFound'
 import ErrorPage from './pages/Error Page/ErrorPage'
+import AdminLayout from './Layout/AdminLayout'
+import AdminLoginPage from './pages/Admin/Admin Login/AdminLoginPage'
+import LiveListing from './pages/Admin/Live Listing/LiveListing'
+import NewUpdates from './pages/Admin/New Updates/NewUpdates'
+import Category from './pages/Admin/Category/Category'
+import Brands from './pages/Admin/Brands/Brands'
+import Locations from './pages/Admin/Locations/Locations'
+import Links from './pages/Admin/Links/Links'
+import Ads from './pages/Admin/Ads/Ads'
 
 // Dynamic imports
 const VehicleDetailsPage = lazy(() =>
@@ -62,6 +71,25 @@ const router = createBrowserRouter([
         path: '*',
         element: <NotFound />,
       },
+    ],
+  },
+  // ADMIN ROUTES
+  {
+    path: '/admin-login',
+    element: <AdminLoginPage />,
+  },
+  {
+    path: 'admin',
+    element: <AdminLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: '', element: <LiveListing /> },
+      { path: 'new-updates', element: <NewUpdates /> },
+      { path: 'manage-categories', element: <Category /> },
+      { path: 'manage-brands', element: <Brands /> },
+      { path: 'manage-locations', element: <Locations /> },
+      { path: 'manage-links', element: <Links /> },
+      { path: 'manage-ads', element: <Ads /> },
     ],
   },
 ])

@@ -9,7 +9,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main style={{ marginTop: '4.84rem', maxWidth: '100rem' }}>
+      <main style={{ marginTop: '4.84rem' }}>
         <Suspense fallback={<LazyLoader />}>
           <Outlet />
         </Suspense>

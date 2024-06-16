@@ -10,18 +10,24 @@ export const getBrandsByVehicleType = (vehicleType) => {
   switch (vehicleType) {
     case 'cars':
     case 'sports_cars':
-      return brandsByVehicleType.cars
+      return brandsByVehicleType.car
     case 'cycles':
     case 'electric_cycles':
-      return brandsByVehicleType.cycles
+      return brandsByVehicleType.cycle
     case 'motorcycles':
     case 'sports_bikes':
-      return brandsByVehicleType.bikes
+      return brandsByVehicleType.bike
     case 'leisure_boats':
     case 'yachts':
-      return brandsByVehicleType.boats
+      return brandsByVehicleType.boat
     case 'charters':
-      return brandsByVehicleType.charters
+      return brandsByVehicleType.charter
+    case 'buggy':
+      return brandsByVehicleType.buggy
+    case 'van':
+      return brandsByVehicleType.van
+    case 'bus':
+      return brandsByVehicleType.bus
 
     default:
       return []

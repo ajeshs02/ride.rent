@@ -8,12 +8,17 @@ import Images from './vehicle images/Images'
 import Social from './Social Media Links/Social'
 import { IoLocationOutline } from 'react-icons/io5'
 import MobileProfileCard from '../../components/Card/Mobile Profile Card/MobileProfileCard'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { useLoaderData } from 'react-router-dom'
 
 const VehicleDetailsPage = () => {
   const detailsSectionRef = useRef(null)
   const isInViewPort = useIntersectionObserver(detailsSectionRef)
+
+  const { contacts } = useLoaderData()
+
+  useEffect(() => console.log(contacts), [contacts])
 
   return (
     <section className="vehicle-details-section wrapper">

@@ -38,7 +38,7 @@ const Landing = () => {
   }, [selectedType])
 
   return (
-    <section className="lading-section  ">
+    <section className="landing-section  ">
       <div className="landing-top">
         {/* mobile visible button */}
         <button className="yellow-gradient default-btn list-btn">

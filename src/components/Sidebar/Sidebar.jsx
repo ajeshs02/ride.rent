@@ -14,13 +14,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </figcaption>
           </figure>
         </div>
-        {/* <a href="index.html" className="">
-            <img
-              src="assets/img/logo-small.png"
-              className="img-fluid"
-              alt="Logo"
-            />
-          </a> */}
+
         <button
           aria-label="Sidebar Toggle"
           className="hamburger-close-btn "

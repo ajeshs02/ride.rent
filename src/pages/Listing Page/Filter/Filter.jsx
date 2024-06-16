@@ -51,7 +51,7 @@ const Filter = () => {
         {/* Vehicle Sub Types */}
         {selectedFilters.vehicleType.length > 0 && (
           <Accordion
-            title={`${getVehicleTypeLabel()} Type`}
+            title={`${getVehicleTypeLabel()} Category`}
             options={getVehicleSubTypes()}
             selected={selectedFilters.vehicleSubType}
             onChange={(value) => handleFilterChange('vehicleSubType', value)}
@@ -61,7 +61,7 @@ const Filter = () => {
         {/* Car Categories */}
         {selectedFilters.vehicleType[0] === 'cars' && (
           <Accordion
-            title="Car Categories"
+            title="Car Types"
             options={carCategories}
             selected={selectedFilters.carCategories || []}
             onChange={(value) => handleFilterChange('carCategories', value)}

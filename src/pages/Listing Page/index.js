@@ -24,6 +24,9 @@ export const vehicleTypes = [
   { label: 'Sports Bikes', value: 'sports_bikes' },
   { label: 'Leisure Boats', value: 'leisure_boats' },
   { label: 'Charters', value: 'charters' },
+  { label: 'Buggy', value: 'buggy' },
+  { label: 'Van', value: 'van' },
+  { label: 'Buses', value: 'bus' },
 ]
 
 // carCategories

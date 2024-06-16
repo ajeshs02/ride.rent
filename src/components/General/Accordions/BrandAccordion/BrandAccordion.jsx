@@ -9,6 +9,8 @@ const BrandAccordion = ({ title, options, selected, onChange }) => {
 
   const contentRef = useRef(null)
 
+  // useEffect(() => console.log(filteredOptions), [])
+
   const toggleAccordion = () => {
     setIsOpen(!isOpen)
   }
@@ -31,6 +33,7 @@ const BrandAccordion = ({ title, options, selected, onChange }) => {
 
     return () => clearTimeout(debounceTimeout)
   }, [search, options])
+
   return (
     <div className={`brand ${isOpen ? 'open' : ''}`}>
       <button className="brand-header" onClick={toggleAccordion}>

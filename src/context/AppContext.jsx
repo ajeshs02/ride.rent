@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
   // global state for listing page filter
   const [selectedFilters, setSelectedFilters] = useState({
     modelYear: [],
-    vehicleType: ['cars'],
+    vehicleType: ['car'],
     vehicleSubType: [],
     carCategories: [],
     seats: [],
